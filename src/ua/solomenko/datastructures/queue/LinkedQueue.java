@@ -1,4 +1,4 @@
-package ua.solomenko.datastrucruers.queue;
+package ua.solomenko.datastructures.queue;
 
 public class LinkedQueue<E> implements Queue<E> {
     private Node first;

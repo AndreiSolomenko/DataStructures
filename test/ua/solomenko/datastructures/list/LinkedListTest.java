@@ -1,4 +1,4 @@
-package ua.solomenko.datastrucruers.list;
+package ua.solomenko.datastructures.list;
 
 import org.junit.Before;
 import org.junit.Test;

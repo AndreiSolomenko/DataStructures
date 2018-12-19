@@ -1,4 +1,4 @@
-package ua.solomenko.datastrucruers.queue;
+package ua.solomenko.datastructures.queue;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package ua.solomenko.datastrucruers.stack;
+package ua.solomenko.datastructures.stack;
 
 public class LinkedStack<E> implements Stack<E> {
     private Node last;

@@ -1,4 +1,4 @@
-package ua.solomenko.datastrucruers.stack;
+package ua.solomenko.datastructures.stack;
 
 import org.junit.Test;
 

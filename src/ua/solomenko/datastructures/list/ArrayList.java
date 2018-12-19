@@ -1,4 +1,4 @@
-package ua.solomenko.datastrucruers.list;
+package ua.solomenko.datastructures.list;
 
 public class ArrayList<E> implements List<E> {
 

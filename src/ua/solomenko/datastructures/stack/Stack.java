@@ -1,4 +1,4 @@
-package ua.solomenko.datastrucruers.stack;
+package ua.solomenko.datastructures.stack;
 
 public interface Stack<E> {
 
