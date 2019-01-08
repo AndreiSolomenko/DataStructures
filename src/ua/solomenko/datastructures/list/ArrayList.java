@@ -4,6 +4,7 @@ public class ArrayList<E> implements List<E> {
 
     private E[] elements;
     private int size;
+    private int iteratorIndex;
 
     public ArrayList() {
         this.elements = (E[]) new Object[10];
@@ -122,6 +123,16 @@ public class ArrayList<E> implements List<E> {
             }
         }
         return - 1;
+    }
+
+    public boolean iteratorHasNext() {
+        return iteratorIndex < size;
+    }
+
+    public E iteratorNext() {
+        E res = (E) get(iteratorIndex);
+        iteratorIndex++;
+        return res;
     }
 
     private void resize() {

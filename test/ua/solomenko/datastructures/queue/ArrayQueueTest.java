@@ -3,56 +3,24 @@ package ua.solomenko.datastructures.queue;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 
-public class ArrayQueueTest{
+public class ArrayQueueTest extends AbstractQueueTest {
 
-    @Test
-    public void testPushPeekAndPop(){
-        //prepare
-        ArrayQueue queue = new ArrayQueue();
-
-        //when
-        for(int i = 0 ; i < 11 ; i++){
-            queue.push(i);
-        }
-        //then
-        assertEquals(11, queue.size());
-
-        for(int i = 0 ; i < 11 ; i++){
-            assertEquals(i, queue.peek());
-            assertEquals(i, queue.pop());
-        }
+    @Override
+    public Queue getQueueImplementation() {
+        return new ArrayQueue();
     }
 
     @Test
-    public void testPushAndPop(){
+    public void testArrayLengthExcessWithMinSize() {
         //prepare
-        ArrayQueue queue = new ArrayQueue();
+        ArrayQueue<Object> queue = new ArrayQueue();
 
         //when
-        for(int i = 0 ; i < 5 ; i++){
+        for (int i = 0 ; i < 11 ; i++) {
             queue.push(i);
         }
-
-        //then
-        assertEquals(5, queue.size());
-
-        for(int i = 0 ; i < 5 ; i++){
-            assertEquals(i, queue.pop());
-        }
-    }
-
-    @Test
-    public void testArrayLengthExcessWithMinSize(){
-        //prepare
-        ArrayQueue queue = new ArrayQueue();
-
-        //when
-        for(int i = 0 ; i < 11 ; i++){
-            queue.push(i);
-        }
-        for(int i = 0 ; i < 10 ; i++){
+        for (int i = 0 ; i < 10 ; i++) {
             queue.pop();
         }
 
@@ -63,42 +31,12 @@ public class ArrayQueueTest{
     }
 
     @Test
-    public void testPopIfEmpty(){
+    public void testResize() {
         //prepare
-        ArrayQueue queue = new ArrayQueue();
+        ArrayQueue<Object> queue = new ArrayQueue();
 
         //when
-        queue.push(null);
-
-        //then
-        assertNull(queue.pop());
-    }
-
-    @Test
-    public void testPeek(){
-        //prepare
-        ArrayQueue queue = new ArrayQueue();
-
-        //when
-        for(int i = 0 ; i < 5 ; i++){
-            queue.push(i);
-        }
-
-        //then
-        for(int i = 0 ; i < 5 ; i++){
-            assertEquals(i, queue.peek());
-            assertEquals(i, queue.pop());
-        }
-
-    }
-
-    @Test
-    public void testResize(){
-        //prepare
-        ArrayQueue queue = new ArrayQueue();
-
-        //when
-        for(int i = 0 ; i < 15 ; i++){
+        for (int i = 0 ; i < 15 ; i++) {
             queue.push(i);
         }
 
